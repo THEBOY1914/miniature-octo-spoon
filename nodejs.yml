@@ -1,0 +1,23 @@
+ActivationState: WildcardActivated means the phone has legitimate apple activation. FactoryActivated means the phone is hacktivated. 
+
+SAMState: Loaded OK means the perferences module is able to communicate with the module loaded in lockdownd. If it says "Waiting for response..." it probably means SAM couldn't load for some reason. 
+
+Backup Activation: Backs up your activation record in an encrypted format to a server. This is necessary before Restore activation will work, and will only work if your phone is WildcardActivated. 
+
+De-Activate iPhone: This will clear out activation records so that you can obtain a new activation from iTunes. This will not work if a hacktivation is still loaded, since the hacktivation will immediately cause it to revert to FactoryActivated, if this happens you should "Revert Lockdownd" then De-Activate again. 
+
+Clear Push Sessions: This will clear out any push certificates and sessions, you will need to obtain a new cert from iTunes after running this before push will work again. You should only use this if you are WildcardActivated. 
+
+Revert Lockdownd to Stock: Removes any modifications from Lockdownd (read: Removes hacktivation) 
+
+Enable: Enables/Disables SAM reporting a fake SIM card to lockdownd.
+
+Regenerate SIM: Randomizes any values not specified directly and reports to lockdownd that a new SIM has been inserted. This can be useful if you are on Auto Detect and the SIM was not valid for activation, if you try this a few times you could get lucky. 
+
+Method:
+Auto Detect: Attempts to guess the correct SIM ID from the Region code of the phone.
+By Bundle Name: Allows you to select a bundle from those loaded on the phone by Apple, and lets you select a SIM ID from the contents of that bundle.
+By Country and Carrier: Allows you to select the country the phone came from, then gives you a list of carriers with their SIM IDs from that country.
+Manual: Allows you to enter in a full ICCID and IMSI manually. This is particularly useful if you have a SIM that works, and you just want to use its info.
+Disable Feedback: Disables reporting of successful activations. If this is not disabled, you will report the MCC and MNC of the SIM that successfully activated your phone, as well as your region code and UDID to my servers for use in making the auto-detect more likely to work.
+       
